@@ -20,8 +20,14 @@ const encriptyKey = (keyToCrypt) => {
 };
 
 const decryptKey = (keyToDescrypt) => {
-  if (typeof keyToCrypt !== "string") {
+  if (typeof keyToDescrypt !== "string") {
     return null;
+  }
+  let valueDecrypted = "";
+  for (let index = 1; index < keyToDescrypt.length; index += 2) {
+    console.log(`${keyToDescrypt[index - 1]}${keyToDescrypt[index]}`);
+    stringToDecrypt = `${keyToDescrypt[index - 1]}${keyToDescrypt[index]}`;
+    valueDecrypted = String.fromCharCode(stringToDecrypt);
   }
 };
 
