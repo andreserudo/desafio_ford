@@ -19,16 +19,39 @@ const encriptyKey = (keyToCrypt) => {
   return numberInFirstCrypt;
 };
 
+const decryptKey = (keyToDescrypt) => {
+  if (typeof keyToCrypt !== "string") {
+    return null;
+  }
+};
+
+// *************** encrypt ***************
+
 // teste de entrada do dado
 if (encriptyKey(12) === null) {
-  console.log("checar se a entrada não é valida");
+  console.log("encrypt - checar se a entrada não é valida");
 } else {
-  console.log("checar se a entrada é valida");
+  console.log("encrypt - checar se a entrada é valida");
 }
 
 // // testes da primeira criptografi - aaplicação
 if (encriptyKey("ABC") === "656667") {
-  console.log("gerar na primeira cryptografia de asc para numero");
+  console.log("encrypt - gerar na primeira cryptografia de asc para numero");
 } else {
-  console.log("nao funcionou");
+  console.log("encrypt - nao funcionou");
+}
+
+// // *************** decrypt ***************
+
+// teste de entrada do dado
+if (decryptKey(12) === null) {
+  console.log("decrypt - checar se entrada não é valida");
+} else {
+  console.log("decrypt - checar se a entrada é valida");
+}
+
+if (decryptKey("656667") === "ABC") {
+  console.log("decrypt - gerar na primeira descritografia de asc para numero");
+} else {
+  console.log("decrypt - nao funcionou");
 }
